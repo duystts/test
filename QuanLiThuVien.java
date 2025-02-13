@@ -100,6 +100,7 @@ public class QuanLiThuVien {
             }
             System.out.println("Press Enter to continue...");
             sc.nextLine();
+            System.out.println("hmm");
         }
     }
 }
