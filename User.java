@@ -21,6 +21,7 @@ public class User {
     public boolean borrowBook(Book book){
         if(book.borrow()){
             borrowedBooks.add(book);
+            book.setUserBorrow(name);
             System.out.println("Borrow book successfully");
             return true;
         }

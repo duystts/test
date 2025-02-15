@@ -3,12 +3,14 @@ public class Book{
     private String author;
     private int id;
     private boolean isBorrowed;
-    
+    private String UserBorrow;
+
     public Book(String title, String author, int id){
         this.title = title;
         this.author = author;
         this.id = id;
         this.isBorrowed = false;
+        this.UserBorrow =  null;
     }
 
     public boolean borrow(){
@@ -41,9 +43,15 @@ public class Book{
     public int getID(){
         return id;
     }
+
+    public String setUserBorrow(String name){
+        return UserBorrow = name;
+    }
+
     @Override
     public String toString() {
         String status = isBorrowed ? "Borrowed" : "Available";
-        return title + " - " + author + " - " + id + " - " + status;
+        String whoBorrow = UserBorrow == null ? "" : "by " + UserBorrow;
+        return title + " - " + author + " - " + id + " - " + status + " " + whoBorrow;
     }
 }
