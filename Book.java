@@ -23,6 +23,7 @@ public class Book{
     public boolean returnBook(){
         if(isBorrowed){
             isBorrowed =  false;
+            UserBorrow =  null;
             System.out.println("Return book successfully");
             return true;
         }

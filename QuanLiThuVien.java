@@ -94,6 +94,7 @@ public class QuanLiThuVien {
                     break;
                 case 8:
                     System.out.println("Bye!");
+                    sc.close();
                     return;
                 default:
                     System.out.println("Invalid choice! Please choose again(1-8)");
